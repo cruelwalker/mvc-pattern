@@ -9,17 +9,18 @@ if (isset($_SESSION['user'])) {
 <html>
     <head>
         <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="formStyle.css">
     </head>
     <body>
-        <h2>Login</h2>
+        <h1>Login</h1>
         <?php if (@$_GET['err'] == 1) { ?>
             <div>Login incorrect. please check again.</div>
         <?php } ?>
-        <form action="index.php" method="POST">
+        <form action="index.php" method="POST" class="formStyle">
             <input type="text" name="username" placeholder="Username*" required>
             <input type="password" name="password" placeholder="Password*" required>
             <input type="submit" name="login" value="Login">
         </form>
-            <h1 href="register.php">click here to register</h1>
+            <p><b><a href="registeration.php">click here to register</a></b></p>
     </body>
 </html>
